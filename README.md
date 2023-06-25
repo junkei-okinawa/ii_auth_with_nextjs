@@ -10,7 +10,7 @@ This is an [Internet Computer](https://internetcomputer.org/) and [Next.js](http
 clone this repository and chenge directory to cloned directory.
 
 ```bash
-git clone git@github.com:junkei-okinawa/ii_auth_with_nextjs.git
+git clone https://github.com/junkei-okinawa/ii_auth_with_nextjs.git
 cd ii_auth_with_nextjs
 ```
 
