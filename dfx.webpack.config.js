@@ -19,8 +19,6 @@ function initCanisterIds() {
     process.env.DFX_NETWORK ||
     (process.env.NODE_ENV === "production" ? "ic" : "local")
 
-  console.info(`initCanisterIds: network=${network}`)
-  console.info(`initCanisterIds: DFX_NETWORK=${process.env.DFX_NETWORK}`)
 
   // let envFileName = '.env.production'
   // if (network !== 'ic') {
@@ -33,6 +31,8 @@ function initCanisterIds() {
     process.env[`NEXT_PUBLIC_${canister.toUpperCase()}_CANISTER_ID`] =
       canisters[canister][network]
   }
+  console.info(`initCanisterIds: network=${network}`)
+  console.info(`initCanisterIds: DFX_NETWORK=${process.env.DFX_NETWORK}`)
 }
 
 function initDevServerProxyPort() {

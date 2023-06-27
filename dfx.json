@@ -10,6 +10,15 @@
         "out"
       ],
       "type": "assets"
+    },
+    "internet_identity_div": {
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "declarations": {
+        "output": "src/declarations/internet_identity_div",
+        "node_compatibility": true
+      }
     }
   },
   "defaults": {

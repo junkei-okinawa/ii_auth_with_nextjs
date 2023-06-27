@@ -4,6 +4,8 @@ import React, {
 import { Identity } from "@dfinity/agent";
 import { Principal } from "@dfinity/principal";
 import { AuthClient } from "@dfinity/auth-client";
+import { canisterId as IICanisterID }
+  from '@src/declarations/internet_identity_div';
 
 export type AuthContextType = {
   isAuthenticated: boolean;
@@ -39,7 +41,10 @@ const defaultOptions = {
    * @type {import("@dfinity/auth-client").AuthClientLoginOptions}
    */
   loginOptions: {
-    identityProvider: "https://identity.ic0.app/#authorize",
+    identityProvider:
+      process.env['DFX_NETWORK'] === "ic" ?
+        "https://identity.ic0.app/#authorize" :
+        `http://localhost:8000/?canisterId=${IICanisterID}`,
   },
 };
 
