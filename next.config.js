@@ -19,5 +19,6 @@ module.exports = {
   },
   devServer: devServer,
   swcMinify: false,
+  output: 'export',
 }
 console.log("module.exports.devServer.proxy: ", JSON.stringify(module.exports.devServer.proxy));
